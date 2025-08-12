@@ -1,6 +1,9 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:bonjour/utils/global_color.dart';
+
+const taupe = Color.fromARGB(255, 152, 137, 109);
+
 FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
 void showNotification() async {
@@ -45,4 +48,32 @@ ElevatedButton createColorButton(Color color) {
       style: TextStyle(fontSize: 16, color: Colors.black),
     ),
   );
+}
+
+List<Widget> createFontButton(String fontFamily, String fontName) {
+  return [
+    ElevatedButton(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all<Color>(
+          Colors.white,
+        ),
+        shape: WidgetStateProperty.all<CircleBorder>(
+          CircleBorder(
+            side: BorderSide(color: Colors.black),
+          ),
+        ),
+      ),
+      onPressed: () => {
+        globalFont.value = fontFamily,
+      },
+      child: Text(
+        "",
+        style: TextStyle(fontSize: 16, color: Colors.black),
+      ),
+    ),
+    Text(
+      fontName,
+      style: TextStyle(fontFamily: fontFamily),
+    ),
+  ];
 }

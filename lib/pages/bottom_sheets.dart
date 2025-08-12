@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bonjour/utils/global_color.dart';
 import 'package:bonjour/utils/utils.dart';
 
 Widget buildBottomSheet(BuildContext context) {
@@ -27,31 +26,9 @@ Widget buildBottomSheet(BuildContext context) {
                     child: Column(
                       children: [
                         Padding(padding: EdgeInsets.all(10)),
-                        createColorButton(Colors.white),
+                        createColorButton(taupe),
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.white,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {
-                            globalFont.value = 'Playfair Display',
-                          },
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.black),
-                          ),
-                        ),
-                        Text(
-                          'Playfair',
-                          style: TextStyle(fontFamily: 'Playfair Display'),
-                        ),
+                        ...createFontButton('Playfair Display', 'Playfair')
                       ],
                     ),
                   ),
@@ -61,29 +38,7 @@ Widget buildBottomSheet(BuildContext context) {
                         Padding(padding: EdgeInsets.all(10)),
                         createColorButton(Colors.blueGrey),
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.white,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {
-                            globalFont.value = 'Dancing Script',
-                          },
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.black),
-                          ),
-                        ),
-                        Text(
-                          'Dancing',
-                          style: TextStyle(fontFamily: 'Dancing Script'),
-                        ),
+                        ...createFontButton('Dancing Script', 'Dancing')
                       ],
                     ),
                   ),
@@ -93,27 +48,8 @@ Widget buildBottomSheet(BuildContext context) {
                         Padding(padding: EdgeInsets.all(10)),
                         createColorButton(Colors.lightGreen),
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.white,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {globalFont.value = 'DMSerif'},
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.black),
-                          ),
-                        ),
-                        Text(
-                          'DMSerif',
-                          style: TextStyle(fontFamily: 'DMSerif'),
-                        ),
+                        ...createFontButton('DMSerif', 'DMSerif')
+
                       ],
                     ),
                   ),
@@ -124,24 +60,7 @@ Widget buildBottomSheet(BuildContext context) {
                         Padding(padding: EdgeInsets.all(10)),
                         createColorButton(Colors.yellow),
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.white,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {globalFont.value = 'Fjalla'},
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.black),
-                          ),
-                        ),
-                        Text('Fjalla', style: TextStyle(fontFamily: 'Fjalla')),
+                        ...createFontButton('Fjalla', 'Fjalla')
                       ],
                     ),
                   ),
