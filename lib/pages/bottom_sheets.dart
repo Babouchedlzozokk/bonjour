@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bonjour/utils/global_color.dart';
+import 'package:bonjour/utils/utils.dart';
 
 Widget buildBottomSheet(BuildContext context) {
   return FractionallySizedBox(
@@ -26,25 +27,7 @@ Widget buildBottomSheet(BuildContext context) {
                     child: Column(
                       children: [
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.white,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {
-                            globalBackgroundColor.value = Colors.white,
-                          },
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.black),
-                          ),
-                        ),
+                        createColorButton(Colors.white),
                         Padding(padding: EdgeInsets.all(10)),
                         ElevatedButton(
                           style: ButtonStyle(
@@ -76,25 +59,7 @@ Widget buildBottomSheet(BuildContext context) {
                     child: Column(
                       children: [
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.blueGrey,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {
-                            globalBackgroundColor.value = Colors.blueGrey,
-                          },
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.white),
-                          ),
-                        ),
+                        createColorButton(Colors.blueGrey),
                         Padding(padding: EdgeInsets.all(10)),
                         ElevatedButton(
                           style: ButtonStyle(
@@ -126,25 +91,7 @@ Widget buildBottomSheet(BuildContext context) {
                     child: Column(
                       children: [
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.lightGreen,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {
-                            globalBackgroundColor.value = Colors.lightGreen,
-                          },
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.white),
-                          ),
-                        ),
+                        createColorButton(Colors.lightGreen),
                         Padding(padding: EdgeInsets.all(10)),
                         ElevatedButton(
                           style: ButtonStyle(
@@ -175,25 +122,7 @@ Widget buildBottomSheet(BuildContext context) {
                     child: Column(
                       children: [
                         Padding(padding: EdgeInsets.all(10)),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all<Color>(
-                              Colors.yellow,
-                            ),
-                            shape: WidgetStateProperty.all<CircleBorder>(
-                              CircleBorder(
-                                side: BorderSide(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          onPressed: () => {
-                            globalBackgroundColor.value = Colors.yellow,
-                          },
-                          child: Text(
-                            "",
-                            style: TextStyle(fontSize: 16, color: Colors.white),
-                          ),
-                        ),
+                        createColorButton(Colors.yellow),
                         Padding(padding: EdgeInsets.all(10)),
                         ElevatedButton(
                           style: ButtonStyle(
